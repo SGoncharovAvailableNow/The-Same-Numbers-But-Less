@@ -11,6 +11,7 @@ namespace TheSameNumbersButLess.ToLessNimbersConverter
         public static int NumbersConverter(int number)
         {
             int[] num = number.ToString().Select(x => x - '0').ToArray();
+            
             if (num.Length <= 1)
             {
                 return -1;
@@ -21,8 +22,6 @@ namespace TheSameNumbersButLess.ToLessNimbersConverter
 
             for (int i = 0; i < num.Length; i++, lastIndex++, secondLastIndex++)
             {
-
-
                 int lastDigit = num[num.Length - lastIndex];
                 int secondLastDigit = num[num.Length - secondLastIndex];
 
